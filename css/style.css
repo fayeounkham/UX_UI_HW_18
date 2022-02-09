@@ -67,3 +67,78 @@ footer {
 h1 {
     font-size: xx-large;
 }
+
+.flexContainer {
+    display: flex;
+    width: 33%;
+    margin: auto;
+    padding: 50px;
+}
+
+.workGrid {
+    display: grid;
+    grid-template-rows: 350px 350px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "timetasticImg iscImg nmpImg"
+    "timetastic isc nmp";
+}
+
+#timetasticImg {
+    grid-area: timetasticImg;
+}
+
+#timetastic {
+    grid-area: timetastic;
+}
+
+#iscImg {
+    grid-area: iscImg;
+    margin-top: 80px;
+}
+
+#isc {
+    grid-area: isc;
+}
+
+#nmpImg {
+    grid-area: nmpImg;
+}
+
+#nmp {
+    grid-area: nmp;
+}
+
+.mySkills {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.myWork {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#timetastic, #isc, #nmp {
+    padding-top: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+    .flexContainer {
+        flex-direction: column;
+    }  
+    .myWork {
+        width: 100%;
+    }  
+    .workGrid {
+        grid-template-rows: 350px 350px 350px 350px 350px 350px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "timetasticImg"
+        "timetastic"
+        "iscImg"
+        "isc"
+        "nmpImg"
+        "nmp";
+    }
+}
