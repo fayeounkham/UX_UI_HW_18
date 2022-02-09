@@ -68,6 +68,10 @@ h1 {
     font-size: xx-large;
 }
 
+li {
+    padding: 25px;
+}
+
 .flexContainer {
     display: flex;
     width: 33%;
